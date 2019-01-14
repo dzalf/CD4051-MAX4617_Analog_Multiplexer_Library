@@ -98,8 +98,7 @@ void loop() {
     Serial.print("t: ");
     Serial.print(elapsed);
     Serial.println(" ");          // Notice that this is the last print with carry return. See note below! **
-    digitalWrite(ledPin, HIGH);
-    
+   
     loopTime = millis();
   }
   
