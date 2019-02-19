@@ -3,7 +3,7 @@
  *     The signal can come from up to 8 different oscillators, for example and therefore it was designed
  *     around speed over accuracy
  *     
- *     It is based on the library FREQCount from Paul Stoffregen 
+ *     It is based on the library FreqCount from Paul Stoffregen 
  *     
  *     ---> https://github.com/PaulStoffregen/FreqCount
  *     
