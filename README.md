@@ -16,6 +16,12 @@ Usage:
 4. To select a channel pass an integer value corresponding to the channel to be selected --> muxDevice(4); // to connect the input/output (common pin 3) to the switch from channel 4 (pin 1)
    
    **Remember that the permitted channel values are only from 0 to 7**
+   
+**Important:** Review the two included examples to get a better idea of the utility of this library.
+
+Cheers!
+
+dzalf :sunglasses:
 
 **#TODO**
 
