@@ -27,4 +27,4 @@ dzalf :sunglasses:
 
 ~~Sooon I will implement the activation/deactivation of the MUX from the library (Pin EN from MUX). For now you can simply tie this pin to GND to enable it. **Never leave the enable pin floating**~~
 
-Add more examples of the usability of the library ;)
+Add more examples of the usability of the library :;):
