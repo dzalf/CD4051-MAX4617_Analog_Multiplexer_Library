@@ -2,10 +2,11 @@
 
 // Constructor
 
-MUX::MUX(uint8_t pinC, uint8_t pinB, uint8_t pinA) {
+MUX::MUX(uint8_t pinC, uint8_t pinB, uint8_t pinA, uint8_t pinEn) {
   _pinA = pinA; 
   _pinB = pinB; 
   _pinC = pinC;
+  _pinEn = pinEn;
   
   cp[0] = _pinA;
   cp[1] = _pinB;
@@ -26,12 +27,32 @@ void MUX::setup(void) {
     digitalWrite(cp[posPin], LOW);
   }
   
+  pinMode(_pinEn, OUTPUT);
+  delay(50);
+  disable();    // The device is disabled by default
+
 }
-	// Select channel by bit shifting
+
+void MUX::enable(){
+
+  digitalWrite(_pinEn, LOW);
+  _enabled = true;
+}
+
+void MUX::disable(){
+
+  digitalWrite(_pinEn, HIGH);
+  _enabled = false;
+	
+}
+
+// Select channel by bit shifting
 void MUX::selectChannel(uint8_t ch) {
-  
-  for (int state = 0; state < 3; state++) {
-    digitalWrite(cp[state], ch & 1);
-    ch >>= 1;
+
+  if(_enabled){
+    for (int state = 0; state < 3; state++) {
+      digitalWrite(cp[state], ch & 1);
+      ch >>= 1;
+    }
   }
 }

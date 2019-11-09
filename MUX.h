@@ -16,7 +16,9 @@ class MUX {
   public:
   
     //constructor
-    MUX(uint8_t pinC, uint8_t pinB, uint8_t pinA);
+    MUX(uint8_t pinC, uint8_t pinB, uint8_t pinA, uint8_t pinEn);
+
+    // Pin A is the LSB; PinEn is active Low. Drive pins high to set all switches off
 
     // Methods and variables
 	
@@ -24,12 +26,16 @@ class MUX {
     
 	void setup(void);
     void selectChannel(uint8_t ch);
+    void enable(void);
+    void disable(void);
 
   private:
 
     uint8_t _pinA;
     uint8_t _pinB;
     uint8_t _pinC;
+    uint8_t _pinEn;
+    bool _enabled = false;
 
 };
 
