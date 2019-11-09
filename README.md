@@ -10,7 +10,7 @@ It is a simple yet useful layer of abstraction to simplify the use of these anal
 
 Usage:
 
-1. Declare the triad of pins from the uC connected to the MUX's select pins in the order --> C, B, A and Enable (9,10,11,6  according to the datasheets)
+1. Declare the group of pins from the uC connected to the MUX's select pins in the order --> C, B, A and Enable (9,10,11,6  according to the datasheets)
 2. Instantiate as many MUX objects as physical devices you need using --> **MUX** muxDevice(pinC, pinB, pinA, pinEn)
 3. Initialize the library in the Setup function --> muxDevice.setup();
 4. To enable the device use the method --> muxDevice.enable(); to disable* it: muxDevice.disable();
