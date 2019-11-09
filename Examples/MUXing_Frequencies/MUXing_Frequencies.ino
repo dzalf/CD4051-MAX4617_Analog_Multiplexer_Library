@@ -3,7 +3,7 @@
  *     The signal can come from up to 8 different oscillators, for example and therefore it was designed
  *     around speed over accuracy
  *     
- *     It is based on the library FreqCount from Paul Stoffregen 
+ *     It is based on the library FREQCount from Paul Stoffregen 
  *     
  *     ---> https://github.com/PaulStoffregen/FreqCount
  *     
@@ -17,11 +17,14 @@
  *     
  *     to obtain a smoother response
  *     
+ *     
  *     Daniel Melendrez
  *     
- *     December 2018
+ *     December 2018 --> Ver: 0.2
  *     
- *     Ver: 0.2
+ *     November 2019 --> Ver: 0.3
+ *	   
+ 
  * 
  */
 
@@ -38,7 +41,7 @@ long nowTime;
 long previousTime, loopTime;
 long elapsed;
 
-MUX mux(14, 15, 16);          // Instantiate a MUX object connected to select pins uC-->mux: 14 to 9, 15 to 10 and 16 to 11
+MUX mux(14, 15, 16, 17);          // Instantiate a MUX object (C, B, A, Enable)
 
 RunningAverage myRA(acumulations);  // Start a new Running average that will smooth out the output. Read the documentation for this library
 
@@ -54,11 +57,13 @@ void setup() {
   loopTime = previousTime;
   
   FreqCount.begin(1);     // The gating for the FreqCount Library is the lowest possible (1 ms) aiming to achieve speed over precision
+  mux.enable();
+  
 }
 
 void loop() {
 
-  mux.selectChannel(sensor); // sensor defines the channel to be selected
+  mux.selectChannel(sensor);
   delay(1);
 
   Serial.print(sensor + 1);
@@ -96,8 +101,9 @@ void loop() {
     
     Serial.print("t: ");
     Serial.print(elapsed);
-    Serial.println(" ");          // Note that this is the last print with carry return. See note below! **
-   
+    Serial.println(" ");          // Notice that this is the last print with carry return. See note below! **
+    digitalWrite(ledPin, HIGH);
+    
     loopTime = millis();
   }
   
