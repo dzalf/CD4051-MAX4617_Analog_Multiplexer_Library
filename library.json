@@ -1,0 +1,23 @@
+{
+    "name": "AnalogMUX",
+    "description": "Analog 8-channel multiplexer",
+    "keywords": "Analog MUX, Multiplexer",
+    "authors": [   
+        {
+            "name": "Daniel Melendrez",
+            "email": "dmelendrez@gmail.com",
+            "url": "https://github.com/dzalf",
+            "maintainer": true
+        }
+    ],
+    "repository": {
+        "type": "git",
+         "url": "https://github.com/dzalf/CD4051-MAX4617_Analog_Multiplexer_Library"
+    },
+    "version": "1.1.9",
+    "homepage": "https://github.com/dzalf/CD4051-MAX4617_Analog_Multiplexer_Library",
+    "frameworks": "Arduino",
+    "examples": [
+        "examples/*/*.ino"
+    ]
+}
