@@ -11,7 +11,7 @@ It is a simple yet useful layer of abstraction to simplify the use of these anal
 Usage:
 
 1. Declare the group of pins from the uC connected to the MUX's select pins in the order --> C, B, A and Enable (9,10,11,6  according to the datasheets)
-2. Instantiate as many MUX objects as physical devices you need using --> **MUX** muxDevice(pinC, pinB, pinA, pinEn)
+2. Instantiate as many AnalogMUX objects as physical devices you need using --> **AnalogMUX** muxDevice(pinC, pinB, pinA, pinEn)
 3. Initialize the library in the Setup function --> muxDevice.setup();
 4. To enable the device use the method --> muxDevice.enable(); to disable* it: muxDevice.disable();
 5. To select a channel pass an integer value corresponding to the channel to be selected --> muxDevice(4); // to connect the input/output (common pin 3) to the switch from channel 4 (pin 1)
