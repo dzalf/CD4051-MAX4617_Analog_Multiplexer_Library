@@ -1,7 +1,7 @@
 {
     "name": "AnalogMUX",
-    "description": "Analog 8-channel multiplexer",
-    "keywords": "Analog MUX, Multiplexer",
+    "description": "Analog 8-channel multiplexer library",
+    "keywords": "Analog MUX, Analogue MUX, Multiplexer",
     "authors": [   
         {
             "name": "Daniel Melendrez",
