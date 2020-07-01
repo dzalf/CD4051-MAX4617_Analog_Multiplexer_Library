@@ -1,3 +1,13 @@
+
+// Library: MUX Abstraction for analog multiplexers including MAX4617 and CD4051 or similar
+// Version: 1.1.9
+// Developer: Daniel Melendrez
+// email: dmelendrez(at)gmail(dot)com
+// Category: Analog Devices
+// Date: Dec 2018 - Initial release
+//       Mar 2009 - Updated constructor to receive the enable pin
+//       July 2020 - Minor corrections. semver updated
+
 #include "MUX.h"
 
 // Constructor
