@@ -22,7 +22,7 @@ Usage:
 **Important:** Review the two included examples to get a better idea of the utility of this library.
 
 
-**UPDATED!** (July 2020 )I decided to refactor the name of the class to make it more clear that this is intended to be used with analog (analogue) multiplexers ONLY.
+**UPDATED!** (July 2020 ) --> I decided to refactor the name of the class to make it more clear that this is intended to be used with analog (analogue) multiplexers ONLY.
 Please fork it and submit your pull requests if you have any ideas in mind
 
 Cheers!
