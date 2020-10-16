@@ -33,4 +33,6 @@ dzalf :sunglasses:
 
 ~~Sooon I will implement the activation/deactivation of the MUX from the library (Pin EN from MUX). For now you can simply tie this pin to GND to enable it. **Never leave the enable pin floating**~~
 
+Upgrade the compatibility of the library with 16:1 Analog MUXs from the family: 74HC4067-Q100 and 74HCT4067-Q100
+
 Add more examples of the usability of the library :wink:
