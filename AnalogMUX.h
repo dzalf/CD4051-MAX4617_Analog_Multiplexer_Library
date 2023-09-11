@@ -5,7 +5,7 @@
 // email: dmelendrez(at)gmail(dot)com
 // Category: Analog Devices
 // Date: Dec 2018 - Initial release
-//       Mar 2009 - Updated constructor to receive the enable pin
+//       Mar 2019 - Updated constructor to receive the enable pin
 //       July 2020 - Class name updated, Minor corrections, semver updated
 
 #ifndef AnalogMUX_h
